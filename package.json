@@ -38,7 +38,7 @@
     "querystring": "^0.2.0",
     "sortablejs": "^1.6.1",
     "sticky-session": "^1.1.2",
-    "vue": "^2.4.4",
+    "vue": "^2.4.4"
   },
   "devDependencies": {
     "assert": "^1.4.1",
