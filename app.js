@@ -53,6 +53,7 @@
     "maxAge": 8640000
   }));
 
+  require("./server/routes")(app);
 
   if (process.isLocal) {
     app.use(morgan(":method :url :status :res[content-length] - :response-time ms"));

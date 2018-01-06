@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cee4f6af-7128-4c27-9566-0d854bdb01d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/etc/libs/fontawesome/brands.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/etc/libs/fontawesome/fontawesome.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/etc/libs/fontawesome/light.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/etc/libs/fontawesome/regular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/etc/libs/fontawesome/solid.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eslintrc.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/helpers/routeHelper.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/eslintrc.json" afterPath="$PROJECT_DIR$/.eslintrc.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server/helpers/routeHelper.js" afterPath="$PROJECT_DIR$/server/routes/helpers/routeHelper.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server/index.js" afterPath="$PROJECT_DIR$/server/routes/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,21 +20,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/main_module/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/index.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+            <state relative-caret-position="272">
+              <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/main_module/js/components/app.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -55,15 +60,18 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>create</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/server/helpers/routeHelper.js" />
         <option value="$PROJECT_DIR$/server/index.js" />
@@ -73,6 +81,11 @@
         <option value="$PROJECT_DIR$/client/etc/libs/fontawesome/light.min.js" />
         <option value="$PROJECT_DIR$/client/etc/libs/fontawesome/regular.min.js" />
         <option value="$PROJECT_DIR$/client/etc/libs/fontawesome/solid.min.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/client/main_module/js/main.js" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/client/main_module/js/components/app.vue" />
       </list>
     </option>
   </component>
@@ -87,7 +100,63 @@
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+        <tasks>
+          <GulpTaskState>
+            <dependencies>
+              <dependency value="lint:server" />
+              <dependency value="set-manifest" />
+            </dependencies>
+            <task-name>build-all</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>build</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>js</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>css</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>lint</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>lint:server</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>watch</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>images</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>generate-sw</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>set-manifest</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>notifyBuildSuccess</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>notifyDeploySuccess</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>create-module</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>help</task-name>
+          </GulpTaskState>
+        </tasks>
+      </GulpfileState>
+    </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="2049" />
@@ -123,6 +192,17 @@
               <item name="starbase" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="starbase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="starbase" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starbase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="starbase" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -138,6 +218,12 @@
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.9.4" />
     <property name="add_unversioned_files" value="true" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lucas\fontes\starbase\server\routes" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -150,6 +236,39 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Node.js.Unnamed">
+    <configuration name="Unnamed" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
+      <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
+        <option name="envVars">
+          <list />
+        </option>
+        <option name="extraHosts">
+          <list />
+        </option>
+        <option name="links">
+          <list />
+        </option>
+        <option name="networkDisabled" value="false" />
+        <option name="networkMode" value="bridge" />
+        <option name="portBindings">
+          <list />
+        </option>
+        <option name="publishAllPorts" value="false" />
+        <option name="version" value="1" />
+        <option name="volumeBindings">
+          <list />
+        </option>
+      </EXTENSION>
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -164,23 +283,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515208604684</updated>
-      <workItem from="1515208606328" duration="1382000" />
+      <workItem from="1515208606328" duration="3074000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1382000" />
+    <option name="totallyTimeSpent" value="3074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="683" height="680" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32671756" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30687022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32864675" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864675" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32864675" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864675" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -203,114 +322,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="144" column="28" lean-forward="false" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
-          <folding>
-            <marker date="1515208911953" expanded="true" signature="0:33" ph="/*...*/" />
-            <marker date="1515208911953" expanded="true" signature="34:46" ph="/*...*/" />
-            <marker date="1515208911953" expanded="true" signature="60:12910" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="1284:1303" ph="[...]" />
-            <marker date="1515208911953" expanded="true" signature="1584:1614" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="1751:5694" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="1796:2261" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="1850:2253" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="1882:2182" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="1918:2095" ph="{&quot;method&quot;: &quot;POST&quot;...}" />
-            <marker date="1515208911953" expanded="true" signature="2018:2082" ph="{&quot;Content-Type&quot;: &quot;application/json&quot;...}" />
-            <marker date="1515208911953" expanded="true" signature="2188:2245" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="2315:3380" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="2489:3327" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="2532:2675" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="2681:2824" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="2858:3119" ph="{&quot;username&quot;: &quot;BUILD FAILING&quot;...}" />
-            <marker date="1515208911953" expanded="true" signature="2958:3100" ph="[...]" />
-            <marker date="1515208911953" expanded="true" signature="3138:3220" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="3244:3317" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="3333:3374" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="3410:4126" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="3430:3507" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="3578:3649" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="4164:4508" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="4205:4500" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="4261:4490" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="4343:4478" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="4366:4408" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="4414:4466" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="4543:4696" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="4653:4688" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="4743:5548" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="4758:5530" ph="[...]" />
-            <marker date="1515208911953" expanded="true" signature="5580:5690" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="5595:5672" ph="[...]" />
-            <marker date="1515208911953" expanded="true" signature="5767:6536" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="5818:6530" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="5856:6522" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="5975:6514" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="6134:6502" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="6288:6362" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="6368:6490" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="6573:6631" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="6665:7271" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="6840:7054" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="7076:7144" ph="{&quot;NODE_ENV&quot;: process.env.NODE_ENV...}" />
-            <marker date="1515208911953" expanded="true" signature="7306:7691" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="7547:7576" ph="[...]" />
-            <marker date="1515208911953" expanded="true" signature="7727:8057" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="8100:8387" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="8280:8381" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="8423:8720" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="8758:8911" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="8961:9803" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="9028:9787" ph="{&quot;cacheId&quot;: packageJson.name...}" />
-            <marker date="1515208911953" expanded="true" signature="9149:9494" ph="[...]" />
-            <marker date="1515208911953" expanded="true" signature="9553:9781" ph="[...]" />
-            <marker date="1515208911953" expanded="true" signature="9554:9624" ph="{&quot;urlPattern&quot;: &quot;/&quot;...}" />
-            <marker date="1515208911953" expanded="true" signature="9626:9700" ph="{&quot;urlPattern&quot;: &quot;/dash&quot;...}" />
-            <marker date="1515208911953" expanded="true" signature="9702:9780" ph="{&quot;urlPattern&quot;: &quot;/location&quot;...}" />
-            <marker date="1515208911953" expanded="true" signature="9852:10049" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="9899:9920" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="9945:10043" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="10099:10309" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="10130:10304" ph="{&quot;username&quot;: &quot;BUILD SUCCESS&quot;...}" />
-            <marker date="1515208911953" expanded="true" signature="10360:10559" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="10391:10554" ph="{&quot;username&quot;: &quot;DEPLOY SUCCESS&quot;...}" />
-            <marker date="1515208911953" expanded="true" signature="10604:11770" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="10707:10775" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="10781:11766" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="11073:11156" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="11162:11760" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="11204:11624" ph="[...]" />
-            <marker date="1515208911953" expanded="true" signature="11205:11321" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="11323:11409" ph="{&quot;content&quot;: &quot;&quot;...}" />
-            <marker date="1515208911953" expanded="true" signature="11411:11512" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="11515:11623" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="11650:11690" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="11713:11750" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="11806:12811" ph="{...}" />
-            <marker date="1515208911953" expanded="true" signature="11812:12010" ph="/*...*/" />
-            <marker date="1515208911953" expanded="true" signature="12851:12905" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -319,15 +330,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eslintrc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/helpers/routeHelper.js">
+    <entry file="file://$PROJECT_DIR$/server/routes/helpers/routeHelper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
@@ -375,10 +378,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
+    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="353" column="46" lean-forward="false" selection-start-line="353" selection-start-column="39" selection-end-line="353" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main_module/js/components/app.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main_module/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>

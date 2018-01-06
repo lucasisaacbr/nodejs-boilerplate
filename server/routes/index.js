@@ -5,7 +5,7 @@
     require("./helpers/routeHelper")(app);
 
     app.get("/", function(req, res){
-      res.status(200).send("OK");
+      return res.status(200).render("./main_module/index.html");
     });
   }
 
